@@ -267,14 +267,21 @@ table.attributes, table.attributes td, table.attributes th{ border: none; }
 .wiki h1, .wiki h2{ border: none; margin: 0; }
 div.wiki pre{ margin: 0; }
 
-#sidebar label, .splitcontentright .box label { text-align: left }
+/* Labels whitespace cleanup */
+#sidebar label { text-align: left }
 #tab-content-members label { text-align: left; display: block; float: none }
+
+p label,
+td label,
+.box:not(.tabular) label { display: inline; float: none; text-align: left}
+.box:not(.tabular) label input { margin-right: 5px }
+.splitcontentright fieldset.box { margin: 15px 0 15px 0 }
 
 #content { position: relative }
 
 .contextual { position: absolute; top: 5px; right: 5px }
 
-a.icon {
+body:not(.controller-repositories) a.icon {
   display: inline-block;
   *display: inline;
   padding: 4px 14px 4px 20px;
@@ -306,26 +313,26 @@ a.icon {
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-a.icon:hover,
-a.icon:active,
-a.icon.active,
-a.icon.disabled,
-.a.icon[disabled] {
+body:not(.controller-repositories) a.icon:hover,
+body:not(.controller-repositories) a.icon:active,
+body:not(.controller-repositories) a.icon.active,
+body:not(.controller-repositories) a.icon.disabled,
+body:not(.controller-repositories) .a.icon[disabled] {
   color: #333333;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
 }
 
-a.icon:active,
-a.icon.active {
+body:not(.controller-repositories) a.icon:active,
+body:not(.controller-repositories) a.icon.active {
   background-color: #cccccc \9;
 }
 
-a.icon:first-child {
+body:not(.controller-repositories) a.icon:first-child {
   *margin-left: 0;
 }
 
-a.icon:hover {
+body:not(.controller-repositories) a.icon:hover {
   color: #333333;
   text-decoration: none;
   background-color: #e6e6e6;

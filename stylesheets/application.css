@@ -271,9 +271,9 @@ div.wiki pre{ margin: 0; }
 #sidebar label { text-align: left }
 #tab-content-members label { text-align: left; display: block; float: none }
 
-p label,
+body:not(.controller-issues) p label,
 td label,
-.box:not(.tabular) label { display: inline; float: none; text-align: left}
+body:not(.controller-issues) .box:not(.tabular) label { display: inline; float: none; text-align: left}
 .box:not(.tabular) label input { margin-right: 5px }
 .splitcontentright fieldset.box { margin: 15px 0 15px 0 }
 
